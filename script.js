@@ -9,6 +9,19 @@ const list = document.getElementById("itemList");
       if (text) {
         const li = document.createElement("li");
         li.textContent = text;
+
+
+          const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "🗑️";
+    deleteBtn.style.marginLeft = "10px"; // Optional styling
+
+    // Add event to delete the list item when clicked
+    deleteBtn.addEventListener("click", () => {
+      li.remove();
+    });
+
+    li.appendChild(deleteBtn);
+          
         list.appendChild(li);
         inputBox.value = "";
       }

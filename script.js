@@ -1,4 +1,3 @@
-
 const inputBox = document.getElementById("userInput");
 const showButton = document.getElementById("showBtn");
 const list = document.getElementById("itemList");
@@ -9,11 +8,13 @@ const list = document.getElementById("itemList");
       if (text) {
         const li = document.createElement("li");
         li.textContent = text;
+        li.style.marginBottom = "10px"
 
 
-          const deleteBtn = document.createElement("button");
+    const deleteBtn = document.createElement("span");
     deleteBtn.textContent = "🗑️";
-    deleteBtn.style.marginLeft = "10px";
+    deleteBtn.style.marginLeft = "12px";
+    deleteBtn.style.fontSize = "15px"
           
     deleteBtn.addEventListener("click", () => {
       li.remove();
@@ -24,3 +25,4 @@ const list = document.getElementById("itemList");
         inputBox.value = "";
       }
     });
+

@@ -13,15 +13,13 @@ const list = document.getElementById("itemList");
 
           const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "🗑️";
-    deleteBtn.style.marginLeft = "10px"; // Optional styling
-
-    // Add event to delete the list item when clicked
+    deleteBtn.style.marginLeft = "10px";
+          
     deleteBtn.addEventListener("click", () => {
       li.remove();
     });
 
-    li.appendChild(deleteBtn);
-          
+        li.appendChild(deleteBtn);
         list.appendChild(li);
         inputBox.value = "";
       }
